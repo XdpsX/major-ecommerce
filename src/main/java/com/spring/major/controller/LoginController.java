@@ -1,5 +1,6 @@
 package com.spring.major.controller;
 
+import com.spring.major.global.GlobalData;
 import com.spring.major.model.Role;
 import com.spring.major.model.User;
 import com.spring.major.repository.RoleRepository;
@@ -33,7 +34,7 @@ public class LoginController {
     }
     @GetMapping("/register")
     public String registerGet(Model model){
-
+        GlobalData.cart.clear();
         return "register";
     }
 
